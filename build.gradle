@@ -3,11 +3,11 @@ plugins {
 	id 'maven-publish'
 }
 
-version = project.mod_version
+version = mod_version + "-fabric-" + minecraft_suffix
 group = project.maven_group
 
 base {
-	archivesName = project.archives_base_name
+	archivesName = mod_id
 }
 
 repositories {
@@ -55,14 +55,6 @@ java {
 
 	sourceCompatibility = JavaVersion.VERSION_17
 	targetCompatibility = JavaVersion.VERSION_17
-}
-
-jar {
-	inputs.property "archivesName", project.base.archivesName
-
-	from("LICENSE") {
-		rename { "${it}_${inputs.properties.archivesName}"}
-	}
 }
 
 // configure the maven publication
