@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "compass-coordinates",
+	"version": "${version}",
+	"name": "Compass coordinates",
+	"description": "Compass that shows X and Z coordinates. (:",
+	"authors": [
+		"ItzNooone"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/compass-coordinates/compass.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"name.compass.CompassCoordinates"
+		],
+		"fabric-datagen": [
+			"name.compass.CompassCoordinatesDataGenerator"
+		]
+	},
+	"mixins": [
+		"compass-coordinates.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
